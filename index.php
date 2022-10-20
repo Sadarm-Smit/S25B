@@ -8,6 +8,11 @@
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <title>Sovann</title>
 </head>
+<style>
+body {
+    background : #ff22;
+}
+</style>
 <body>
     <?php 
         echo "Hello World";
