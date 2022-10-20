@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<head>
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-</head>
-<html>
-<body>
-
 <?php
-echo "My first PHP script!";
+$_GET['subject'];
+subject = "Hello";
 ?>
-
-</body>
-</html>
