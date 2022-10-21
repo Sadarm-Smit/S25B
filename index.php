@@ -1,14 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
+    $username = $_POST['username'];
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
+    $conn = new mysqli('localhost','root','','test');
+    if($conn->connect_error){
+        die('Connection Failed : '.$conn->connect_error);
+    }else {
+        $stmt = $conn->prepare("insert into registration(username)
+            values(?)")
+        $stmt->bind_param("s",$username);
+        $stmt->execute();
+        echo "registration Successfully...";
+        $stmt->close();
+        $conn->close();
+            
+    }
 ?>
